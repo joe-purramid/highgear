@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Videos
+permalink: /videos/
+description: Watch High Gear perform barbershop harmony.
+scripts: ["/js/videos.js"]
+---
+{% from "macros.njk" import external %}
+<section class="videos-hero section--ink" aria-labelledby="page-title">
+<div class="wrap stack">
+<div class="head-row">
+<div class="videos-hero__title stack">
+<p class="eyebrow">Videos</p>
+<h1 id="page-title" class="h1">Hear us ring</h1>
+</div>
+<a href="{{ site.youtubeChannel or 'https://www.youtube.com/' }}" class="btn btn--outline-light"{% if not site.youtubeChannel %} data-todo="YouTube channel URL"{% endif %}>Our YouTube channel {{ external() }}</a>
+</div>
+<div class="video video--featured">
+{% set v = videos.featured %}{% set featured = true %}
+{% include "partials/video.njk" %}
+</div>
+</div>
+</section>
+
+<section class="more-videos" aria-labelledby="more-title">
+<div class="wrap stack">
+<h2 id="more-title" class="h2 h2--sm">More performances</h2>
+<ul class="grid">
+{%- for v in videos.more %}
+<li class="video">
+{% set featured = false %}
+{% include "partials/video.njk" %}
+</li>
+{%- endfor %}
+</ul>
+{%- if videos.captionsOnAll %}
+<p class="more-videos__note">Every video includes captions. Videos never autoplay; press play when you're ready.</p>
+{%- endif %}
+</div>
+</section>

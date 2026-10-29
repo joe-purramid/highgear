@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+{% from "macros.njk" import todo, orTodo, placeholder, gear %}
+<section class="hero section--ink section--decor" aria-labelledby="hero-title">
+{{ gear("", "#EBD48F", true) }}
+<div class="wrap split">
+<div class="hero__text stack">
+<p class="eyebrow">A barbershop quartet · Nashua, NH</p>
+<h1 id="hero-title" class="h1--home display"><span>Four women.</span> <span>One voice.</span></h1>
+<p class="lede">{{ orTodo(site.intro, "ONE OR TWO SENTENCES ABOUT HIGH GEAR — who you are, what you love to sing, where audiences can hear you.") }}</p>
+<div class="btn-row">
+<a href="/contact/" class="btn btn--orange">Book High Gear</a>
+<a href="/videos/" class="btn btn--outline-light">Watch us sing</a>
+</div>
+</div>
+<figure class="hero__figure">
+{%- if site.images.group %}
+<div class="hero__photo">{% image site.images.group, site.images.groupAlt, "(min-width: 1024px) 700px, 100vw", [400, 800, 1200, 1600], { eager: true } %}</div>
+{%- else %}
+{{ placeholder("GROUP PHOTO — all four members.<br>Alt text names each member, left to right.", "hero__photo") }}
+{%- endif %}
+<figcaption>{{ orTodo(site.images.groupCaption, "CAPTION — e.g., where and when the photo was taken") }}</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="section" aria-labelledby="voices-title">
+<div class="wrap stack voices">
+<div class="head-row">
+<h2 id="voices-title" class="h2">Meet the voices</h2>
+<a href="/about/" class="text-link">Read our story</a>
+</div>
+<ul class="grid voices__list">
+{%- asyncEach m in members %}
+<li class="voice">
+{%- if m.photo %}
+<div class="portrait">{% image m.photo, m.name, "(min-width: 1024px) 290px, 50vw", [300, 600] %}</div>
+{%- else %}
+{{ placeholder("PORTRAIT", "portrait") }}
+{%- endif %}
+<p class="part-label">{{ m.part }}</p>
+<p class="voice__name">{{ m.name }}</p>
+</li>
+{%- endeach %}
+</ul>
+</div>
+</section>
+
+<section class="band section--orange" aria-labelledby="style-title">
+<div class="wrap band__inner">
+<div class="band__text stack">
+<h2 id="style-title" class="h2--band display">New to barbershop?</h2>
+<p>Four unaccompanied voices, tuned so precisely that the chords seem to ring with a fifth voice nobody is singing.</p>
+</div>
+<a href="/barbershop-style/" class="btn btn--cream">How barbershop works</a>
+</div>
+</section>

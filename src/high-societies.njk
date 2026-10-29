@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: High Societies
+permalink: /high-societies/
+description: High Gear is a quartet member of Harmony, Inc. and competes in the Barbershop Harmony Society's Northeast District.
+---
+{% from "macros.njk" import todo, placeholder, external, gear %}
+<section class="section section--orange section--decor society harmony-hero" aria-labelledby="page-title">
+{{ gear("", "#141114") }}
+<div class="wrap split">
+{%- if site.images.harmonyLogo %}
+<div class="logo-tile">{% image site.images.harmonyLogo, "Harmony, Inc. logo", "320px", [320, 640] %}</div>
+{%- else %}
+{{ placeholder("HARMONY, INC. LOGO — used per their brand guidelines", "logo-tile") }}
+{%- endif %}
+<div class="society__text stack">
+<p class="eyebrow">Our parent organization</p>
+<h1 id="page-title" class="h1">Harmony, Inc.</h1>
+<p class="lede">An international organization of women singing barbershop harmony, founded in 1959. Its choruses and quartets across North America compete, perform and teach — and High Gear is proud to be one of them.</p>
+<div class="btn-row">
+<a href="https://harmonyinc.org/" class="btn btn--ink">Visit harmonyinc.org {{ external() }}</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section sing" aria-labelledby="links-title">
+<div class="wrap stack">
+<h2 id="links-title" class="h2 h2--sm">Sing with Harmony, Inc.</h2>
+<ul class="grid">
+{%- for card in harmonyLinks %}
+<li>
+<a href="{{ card.url or 'https://harmonyinc.org/' }}" class="link-card"{% if not card.url %} data-todo="{{ card.todo }}"{% endif %}>
+<span class="link-card__title">{{ (card.titleHtml or card.title) | safe }}</span>
+<span class="link-card__text">{{ card.text }}</span>
+<span class="link-card__go">{% if card.url %}harmonyinc.org{% else %}{{ todo(card.todo) }}{% endif %} {{ external() }}</span>
+</a>
+</li>
+{%- endfor %}
+</ul>
+<p class="small-note">Links marked ↗ open the Harmony, Inc. website.</p>
+</div>
+</section>
+
+<section class="section section--gear section--decor society bhs" aria-labelledby="bhs-title">
+{{ gear("", "#EBD48F") }}
+<div class="wrap split">
+<div class="society__text stack">
+<h2 id="bhs-title" class="h2">Barbershop Harmony Society</h2>
+<p class="lede">Founded in 1938 in Tulsa, Oklahoma, and now headquartered in Nashville, the Barbershop Harmony Society kept the barbershop tradition alive through the twentieth century. Today it welcomes singers of every gender in quartets and choruses across North America and beyond.</p>
+<p class="bhs__district">High Gear competes in the Northeast District.</p>
+<div class="btn-row">
+<a href="https://www.barbershop.org/" class="btn btn--cream">Visit barbershop.org {{ external() }}</a>
+</div>
+</div>
+{%- if site.images.bhsLogo %}
+<div class="logo-tile">{% image site.images.bhsLogo, "Barbershop Harmony Society logo", "320px", [320, 640] %}</div>
+{%- else %}
+{{ placeholder("BARBERSHOP HARMONY SOCIETY LOGO — used per their brand guidelines", "logo-tile") }}
+{%- endif %}
+</div>
+</section>

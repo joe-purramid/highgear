@@ -1,0 +1,21 @@
+<header class="site-header">
+<div class="site-header__bar wrap">
+<a href="/" class="site-logo">
+{%- if site.images.logo %}
+{% image site.images.logo, "High Gear", "(min-width: 640px) 224px, 168px", [168, 224, 336, 448], { eager: true } %}
+{%- else %}
+<span class="site-logo__ph" aria-hidden="true" data-todo>[HIGH GEAR LOGO]</span><span class="visually-hidden">High Gear</span>
+{%- endif %}
+</a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden>
+<svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-toggle__label">Menu</span>
+</button>
+<nav id="site-nav" class="site-nav" aria-label="Main">
+<ul>
+{%- for item in nav %}
+<li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+{%- endfor %}
+</ul>
+</nav>
+</div>
+</header>

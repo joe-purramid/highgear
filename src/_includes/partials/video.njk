@@ -1,0 +1,24 @@
+{#- One video. Expects `v` ({ id, title, event }) and `featured` (bool). -#}
+{%- from "macros.njk" import todo, orTodo, placeholder -%}
+{%- set playIcon -%}
+<svg class="play-icon" aria-hidden="true" focusable="false" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="#F0925A"/><path d="M38 30 L68 48 L38 66 Z" fill="#141114"/></svg>
+{%- endset -%}
+<div class="video__frame">
+{%- if v.id %}
+{#- Click-to-load facade. Without JS this is a plain link to the video on
+    YouTube; js/videos.js turns it into a button that loads the
+    privacy-enhanced (youtube-nocookie.com) player in place. -#}
+<a class="yt" href="https://www.youtube.com/watch?v={{ v.id }}" data-yt="{{ v.id }}" data-title="{{ v.title }}" style="background-image: url('https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg')">{{ playIcon | safe }}<span class="visually-hidden">Play video: {{ v.title }}</span></a>
+{%- else %}
+<div class="ph" data-todo>{{ playIcon | safe }}<span>[{% if featured %}FEATURED YOUTUBE EMBED — privacy-enhanced (youtube-nocookie.com), with captions{% else %}YOUTUBE EMBED{% endif %}]</span></div>
+{%- endif %}
+</div>
+{%- if featured %}
+<div class="stack" style="--stack: 4px">
+<h2 class="video__title">{{ orTodo(v.title, "SONG TITLE") }}</h2>
+<p class="video__event">{{ orTodo(v.event, "EVENT OR CONTEST · MONTH YEAR") }}</p>
+</div>
+{%- else %}
+<h3 class="video__title">{{ orTodo(v.title, "SONG TITLE") }}</h3>
+<p class="video__event">{{ orTodo(v.event, "EVENT · MONTH YEAR") }}</p>
+{%- endif %}

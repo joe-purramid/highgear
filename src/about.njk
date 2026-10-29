@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: About Us
+permalink: /about/
+description: Meet High Gear, a women's barbershop quartet from Nashua, NH — Ari Schmidt, Christina Tramack, Jennifer Selby and Deb Green.
+---
+{% from "macros.njk" import todo, orTodo, placeholder %}
+<section class="about-intro" aria-labelledby="page-title">
+<div class="wrap split">
+<div class="about-intro__text stack">
+<p class="eyebrow">About the quartet</p>
+<h1 id="page-title" class="h1">Four friends who shifted into High Gear</h1>
+<p class="lede muted">{{ orTodo(site.story[0], "GROUP STORY, PARAGRAPH 1 — how and when the quartet formed, and where the name came from.") }}</p>
+<p class="muted">{{ orTodo(site.story[1], "GROUP STORY, PARAGRAPH 2 — chorus affiliations, contest history, favorite repertoire, and the kinds of events you perform at.") }}</p>
+</div>
+{%- if site.images.logo %}
+<div class="about-intro__logo">{% image site.images.logo, "High Gear logo: cartoon portraits of Ari Schmidt, Christina Tramack, Jennifer Selby and Deb Green.", "(min-width: 1024px) 400px, 80vw", [400, 800] %}</div>
+{%- else %}
+{{ placeholder("HIGH GEAR LOGO, large — the four member caricatures. Alt text: “High Gear logo: cartoon portraits of Ari Schmidt, Christina Tramack, Jennifer Selby and Deb Green.”", "about-intro__logo") }}
+{%- endif %}
+</div>
+</section>
+
+<section class="section section--ink" aria-labelledby="members-title">
+<div class="wrap stack squad">
+<h2 id="members-title" class="h2">The Squad</h2>
+<div class="grid squad__grid">
+{%- asyncEach m in members %}
+<article class="member" aria-labelledby="member-{{ loop.index }}">
+{%- if m.photo %}
+<div class="portrait">{% image m.photo, m.name, "180px", [180, 360] %}</div>
+{%- else %}
+{{ placeholder("PORTRAIT", "portrait") }}
+{%- endif %}
+<div class="member__body">
+<p class="part-label">{{ m.part }}</p>
+<h3 id="member-{{ loop.index }}" class="member__name">{{ m.name }}</h3>
+<p class="member__pronouns">{{ m.pronouns }}</p>
+<p class="member__bio">{{ orTodo(m.bio, "BIO — 60–100 words: musical background, years in barbershop, life offstage, a favorite song or chord.") }}</p>
+</div>
+</article>
+{%- endeach %}
+</div>
+</div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-title">
+<div class="wrap cta-panel">
+<h2 id="cta-title" class="h2--cta display">Want High Gear at your event?</h2>
+<a href="/contact/" class="btn btn--orange">Get in touch</a>
+</div>
+</section>

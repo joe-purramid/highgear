@@ -1,0 +1,25 @@
+{#- Owner-supplied text that hasn't arrived yet. Renders bracketed, clearly
+    marked placeholder copy instead of invented text. -#}
+{% macro todo(text) -%}
+<span class="todo" data-todo>[{{ text }}]</span>
+{%- endmacro %}
+
+{#- Use the value if present, otherwise a marked placeholder. -#}
+{% macro orTodo(value, text) -%}
+{% if value %}{{ value | safe }}{% else %}{{ todo(text) }}{% endif %}
+{%- endmacro %}
+
+{#- Same-size stand-in for a photo or logo that hasn't arrived yet. -#}
+{% macro placeholder(text, class) -%}
+<div class="ph {{ class }}" data-todo><span>[{{ text | safe }}]</span></div>
+{%- endmacro %}
+
+{#- Visible arrow + hidden text for links that leave the site. -#}
+{% macro external() -%}
+<svg class="ext" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="visually-hidden"> (external site)</span>
+{%- endmacro %}
+
+{#- Decorative dashed-stroke gear. -#}
+{% macro gear(class, color, hub=false) -%}
+<svg class="gear {{ class }}" aria-hidden="true" focusable="false" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="{{ color }}" stroke-width="12" stroke-dasharray="7 5.6"/><circle cx="50" cy="50" r="28" fill="none" stroke="{{ color }}" stroke-width="3"/>{% if hub %}<circle cx="50" cy="50" r="8" fill="{{ color }}"/>{% endif %}</svg>
+{%- endmacro %}

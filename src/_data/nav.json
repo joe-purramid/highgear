@@ -1,0 +1,8 @@
+[
+  { "label": "Home", "url": "/" },
+  { "label": "About Us", "url": "/about/" },
+  { "label": "Barbershop Style", "url": "/barbershop-style/" },
+  { "label": "Videos", "url": "/videos/" },
+  { "label": "High Societies", "url": "/high-societies/" },
+  { "label": "Contact", "url": "/contact/" }
+]

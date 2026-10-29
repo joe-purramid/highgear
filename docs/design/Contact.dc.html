@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>High Gear — Contact</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&amp;display=swap">
+<style>
+body{margin:0;background:#F7EFE0}
+a{color:#7A4520}a:hover{color:#4E2A10}
+*:focus-visible{outline:3px solid #EBD48F;outline-offset:2px;box-shadow:0 0 0 5px #141114}
+.skip{position:absolute;left:16px;top:-80px;background:#EBD48F;color:#141114;padding:12px 16px;font-weight:700;z-index:10}
+.skip:focus{top:16px}
+</style>
+</helmet>
+<div style="position: relative; display: flex; flex-direction: column; min-height: 100vh; font-family: 'DM Sans', system-ui, sans-serif; color: #141114; background: #F7EFE0; line-height: 1.6; font-size: 18px">
+<a href="#main" class="skip">Skip to main content</a>
+
+<header style="background: #141114; color: #F7EFE0; border-bottom: 4px solid #F0925A">
+<div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" style="display: flex; text-decoration: none; color: #F7EFE0">
+<span aria-hidden="true" style="width: 224px; height: 128px; background: #F7EFE0; border: 2px dashed #6E4B2A; border-radius: 8px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; font-size: 15px; font-weight: 700; color: #3D342E; line-height: 1.3">[HIGH GEAR LOGO]</span>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">High Gear</span>
+</a>
+<nav aria-label="Main">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px">
+<li><a href="Main.dc.html" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #F7EFE0; text-decoration: none; font-weight: 600">Home</a></li>
+<li><a href="About.dc.html" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #F7EFE0; text-decoration: none; font-weight: 600">About Us</a></li>
+<li><a href="Barbershop.dc.html" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #F7EFE0; text-decoration: none; font-weight: 600">Barbershop Style</a></li>
+<li><a href="Videos.dc.html" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #F7EFE0; text-decoration: none; font-weight: 600">Videos</a></li>
+<li><a href="Harmony.dc.html" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #F7EFE0; text-decoration: none; font-weight: 600">High Societies</a></li>
+<li><a href="Contact.dc.html" aria-current="page" style="display: block; padding: 10px 14px; min-height: 44px; box-sizing: border-box; color: #EBD48F; text-decoration: none; font-weight: 700; border-bottom: 3px solid #EBD48F">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="main" style="flex: 1 0 auto; padding: 80px 24px 104px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px">
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #7A4520">Contact</p>
+<h1 style="margin: 0; font-family: Limelight, Georgia, serif; font-weight: 400; font-size: clamp(42px, 5.4vw, 64px); line-height: 1.05; text-wrap: balance">Let's make harmony</h1>
+<p style="margin: 0; color: #3D342E; font-size: 20px">Booking a performance, planning a singing valentine, or just curious about barbershop? Send us a note.</p>
+<p style="margin: 0; color: #3D342E">We usually reply within [NUMBER] days.</p>
+<div style="margin-top: 12px; aspect-ratio: 4 / 3; background: #141114; border: 8px solid #FFFBF3; box-shadow: 12px 12px 0 #F0925A; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; box-sizing: border-box; color: #CBBFAE; font-weight: 600">[PERFORMANCE PHOTO]</div>
+</div>
+
+<div style="flex: 1.3 1 480px; min-width: 0; background: #FFFBF3; border: 3px solid #141114; padding: 40px; box-sizing: border-box">
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div role="status" style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: Limelight, Georgia, serif; font-weight: 400; font-size: 34px">Thank you!</h2>
+<p style="margin: 0; color: #3D342E">Your message is on its way. We'll write back to the email address you gave us.</p>
+<button type="button" onClick="{{reset}}" style="align-self: flex-start; min-height: 48px; padding: 0 24px; font: inherit; font-weight: 700; background: transparent; color: #141114; border: 2px solid #141114; border-radius: 999px; cursor: pointer">Send another message</button>
+</div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form onSubmit="{{submit}}" noValidate="{{true}}" aria-labelledby="form-title" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 id="form-title" style="margin: 0; font-size: 26px">Send a message</h2>
+<p style="margin: 0; color: #5A4E44; font-size: 16px">All fields are required.</p>
+</div>
+<sc-if value="{{hasErrors}}" hint-placeholder-val="{{false}}">
+<div role="alert" style="background: #FBE3E6; border: 2px solid #A3261B; padding: 16px 20px; color: #7E0C1E; font-weight: 600">Please fix the {{errorCount}} highlighted field(s) below.</div>
+</sc-if>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-name" style="font-weight: 700">Name</label>
+<input id="f-name" name="name" type="text" autocomplete="name" required="{{true}}" aria-invalid="{{nameInvalid}}" aria-describedby="{{nameDesc}}" value="{{name}}" onChange="{{onName}}" style="min-height: 52px; padding: 0 16px; font: inherit; color: #141114; background: #FFFFFF; border: 2px solid {{nameBorder}}; border-radius: 6px; box-sizing: border-box">
+<sc-if value="{{nameInvalid}}" hint-placeholder-val="{{false}}"><p id="err-name" style="margin: 0; color: #A3261B; font-size: 16px; font-weight: 600">Enter your name.</p></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-email" style="font-weight: 700">Email</label>
+<input id="f-email" name="email" type="email" autocomplete="email" required="{{true}}" aria-invalid="{{emailInvalid}}" aria-describedby="{{emailDesc}}" value="{{email}}" onChange="{{onEmail}}" style="min-height: 52px; padding: 0 16px; font: inherit; color: #141114; background: #FFFFFF; border: 2px solid {{emailBorder}}; border-radius: 6px; box-sizing: border-box">
+<sc-if value="{{emailInvalid}}" hint-placeholder-val="{{false}}"><p id="err-email" style="margin: 0; color: #A3261B; font-size: 16px; font-weight: 600">Enter an email address like name@example.com.</p></sc-if>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-subject" style="font-weight: 700">Subject</label>
+<input id="f-subject" name="subject" type="text" required="{{true}}" aria-invalid="{{subjectInvalid}}" aria-describedby="{{subjectDesc}}" value="{{subject}}" onChange="{{onSubject}}" style="min-height: 52px; padding: 0 16px; font: inherit; color: #141114; background: #FFFFFF; border: 2px solid {{subjectBorder}}; border-radius: 6px; box-sizing: border-box">
+<sc-if value="{{subjectInvalid}}" hint-placeholder-val="{{false}}"><p id="err-subject" style="margin: 0; color: #A3261B; font-size: 16px; font-weight: 600">Enter a subject.</p></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-message" style="font-weight: 700">Message</label>
+<textarea id="f-message" name="message" rows="6" required="{{true}}" aria-invalid="{{messageInvalid}}" aria-describedby="{{messageDesc}}" value="{{message}}" onChange="{{onMessage}}" style="padding: 14px 16px; font: inherit; color: #141114; background: #FFFFFF; border: 2px solid {{messageBorder}}; border-radius: 6px; box-sizing: border-box; resize: vertical"></textarea>
+<sc-if value="{{messageInvalid}}" hint-placeholder-val="{{false}}"><p id="err-message" style="margin: 0; color: #A3261B; font-size: 16px; font-weight: 600">Enter your message.</p></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-weight: 700">Human verification</p>
+<div style="display: flex; align-items: center; gap: 14px; min-height: 68px; padding: 0 18px; border: 2px dashed #5A4E44; border-radius: 6px; color: #3D342E; font-size: 16px">[CLOUDFLARE TURNSTILE WIDGET — no puzzles; most visitors pass automatically]</div>
+</div>
+<button type="submit" style="align-self: flex-start; min-height: 52px; padding: 0 32px; font: inherit; font-weight: 700; background: #F0925A; color: #141114; border: 2px solid #F0925A; border-radius: 999px; cursor: pointer">Send message</button>
+<p style="margin: 0; color: #5A4E44; font-size: 15px">We use your details only to reply to you.</p>
+</form>
+</sc-if>
+</div>
+</div>
+</main>
+
+<footer style="background: #141114; color: #E3D8C6; padding: 56px 24px; font-size: 16px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: Limelight, Georgia, serif; font-size: 26px; color: #F7EFE0">High Gear</p>
+<p style="margin: 0">A proud quartet member of <a href="Harmony.dc.html" style="color: #EBD48F">Harmony, Inc.</a></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+<a href="Contact.dc.html" style="color: #EBD48F; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center">Book or contact us</a>
+<p style="margin: 0">© 2026 High Gear</p>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1433}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { name: '', email: '', subject: '', message: '', tried: false, sent: false };
+}
+renderVals() {
+const s = this.state || {};
+const t = !!s.tried;
+const bad = {
+name: t && !(s.name || '').trim(),
+email: t && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((s.email || '').trim()),
+subject: t && !(s.subject || '').trim(),
+message: t && !(s.message || '').trim()
+};
+const count = Object.values(bad).filter(Boolean).length;
+const v = {
+sent: !!s.sent,
+notSent: !s.sent,
+hasErrors: count > 0,
+errorCount: count,
+name: s.name || '', email: s.email || '', subject: s.subject || '', message: s.message || '',
+onName: (e) => this.setState({ name: e.target.value }),
+onEmail: (e) => this.setState({ email: e.target.value }),
+onSubject: (e) => this.setState({ subject: e.target.value }),
+onMessage: (e) => this.setState({ message: e.target.value }),
+submit: (e) => {
+if (e && e.preventDefault) e.preventDefault();
+const ok = (s.name || '').trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((s.email || '').trim()) && (s.subject || '').trim() && (s.message || '').trim();
+this.setState(ok ? { sent: true, tried: false } : { tried: true });
+},
+reset: () => this.setState({ name: '', email: '', subject: '', message: '', tried: false, sent: false })
+};
+['name', 'email', 'subject', 'message'].forEach((k) => {
+v[k + 'Invalid'] = bad[k];
+v[k + 'Desc'] = bad[k] ? 'err-' + k : undefined;
+v[k + 'Border'] = bad[k] ? '#A3261B' : '#5A4E44';
+});
+return v;
+}
+}
+</script>
+</body>
+</html>

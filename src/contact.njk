@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+description: Book High Gear for your event, plan a singing valentine, or ask us about barbershop.
+scripts: ["/js/contact.js"]
+---
+{% from "macros.njk" import todo, placeholder %}
+{%- if site.turnstileSiteKey %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{%- endif %}
+<div class="contact">
+<div class="wrap split">
+<div class="contact__intro stack">
+<p class="eyebrow">Contact</p>
+<h1 class="h1">Let's make harmony</h1>
+<p class="lede muted">Booking a performance, planning a singing valentine, or just curious about barbershop? Send us a note.</p>
+<p class="muted">We usually reply within {% if site.replyDays %}{{ site.replyDays }}{% else %}{{ todo("NUMBER") }}{% endif %} days.</p>
+{%- if site.images.performance %}
+<div class="contact__photo">{% image site.images.performance, site.images.performanceAlt, "(min-width: 1024px) 500px, 100vw" %}</div>
+{%- else %}
+{{ placeholder("PERFORMANCE PHOTO", "contact__photo") }}
+{%- endif %}
+</div>
+
+<div class="form-panel">
+<div class="form-success stack" id="form-success" hidden>
+<h2 class="display" id="success-title" tabindex="-1">Thank you!</h2>
+<p class="muted" role="status">Your message is on its way. We'll write back to the email address you gave us.</p>
+<button type="button" class="btn btn--outline-dark" id="send-another">Send another message</button>
+</div>
+
+<form class="form" id="contact-form" action="https://formspree.io/f/{{ site.formspreeId or 'FORM_ID' }}" method="POST" aria-labelledby="form-title"{% if not site.formspreeId %} data-todo="Formspree form ID"{% endif %}>
+<div class="form__head">
+<h2 id="form-title">Send a message</h2>
+<p class="small-note">All fields are required.</p>
+</div>
+
+<div class="form-alert" id="form-alert" role="alert" tabindex="-1" hidden></div>
+
+<div class="grid form__row">
+<div class="field">
+<label for="f-name">Name</label>
+<input id="f-name" name="name" type="text" autocomplete="name" required>
+<p id="err-name" class="field__error" hidden>Enter your name.</p>
+</div>
+<div class="field">
+<label for="f-email">Email</label>
+<input id="f-email" name="email" type="email" autocomplete="email" required>
+<p id="err-email" class="field__error" hidden>Enter an email address like name@example.com.</p>
+</div>
+</div>
+<div class="field">
+<label for="f-subject">Subject</label>
+<input id="f-subject" name="subject" type="text" autocomplete="off" required>
+<p id="err-subject" class="field__error" hidden>Enter a subject.</p>
+</div>
+<div class="field">
+<label for="f-message">Message</label>
+<textarea id="f-message" name="message" rows="6" required></textarea>
+<p id="err-message" class="field__error" hidden>Enter your message.</p>
+</div>
+
+{#- Honeypot: Formspree silently drops submissions that fill in _gotcha. -#}
+<div class="hp" aria-hidden="true">
+<label for="f-gotcha">Leave this field empty</label>
+<input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+</div>
+
+<div class="field">
+<p class="field__label">Human verification</p>
+{%- if site.turnstileSiteKey %}
+<div class="cf-turnstile" data-sitekey="{{ site.turnstileSiteKey }}" data-theme="light"></div>
+{%- else %}
+<div class="turnstile-ph" data-todo>[CLOUDFLARE TURNSTILE WIDGET — no puzzles; most visitors pass automatically]</div>
+{%- endif %}
+</div>
+
+<button type="submit" class="btn btn--orange">Send message</button>
+<p class="form__privacy">We use your details only to reply to you.</p>
+</form>
+</div>
+</div>
+</div>

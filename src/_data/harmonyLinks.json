@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Find a chapter",
+    "text": "Locate a chorus near you and visit a rehearsal.",
+    "url": null,
+    "todo": "CHAPTER LOCATOR URL"
+  },
+  {
+    "title": "Contests & convention",
+    "text": "Area and international competitions for quartets and choruses.",
+    "url": null,
+    "todo": "EVENTS URL"
+  },
+  {
+    "title": "Education",
+    "text": "Coaching, workshops and resources for singers at every level.",
+    "url": null,
+    "todo": "EDUCATION URL"
+  },
+  {
+    "title": "New England Voices in Harmony",
+    "titleHtml": "New England <span class=\"nowrap\">Voices in Harmony</span>",
+    "text": "High Gear's home region within Harmony, Inc.",
+    "url": null,
+    "todo": "AREA URL"
+  }
+]

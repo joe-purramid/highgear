@@ -1,0 +1,150 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 2172,
+      "is_interactive": true,
+      "title": "About — desktop",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "AboutMobile.dc.html": {
+      "h": 3280,
+      "is_interactive": true,
+      "title": "About — mobile",
+      "w": 390,
+      "x": 1520,
+      "y": 3200
+    },
+    "Barbershop.dc.html": {
+      "expand": "fill",
+      "h": 2531,
+      "is_interactive": true,
+      "title": "Barbershop Style — desktop",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "BarbershopMobile.dc.html": {
+      "h": 3722,
+      "is_interactive": true,
+      "title": "Barbershop Style — mobile",
+      "w": 390,
+      "x": 3040,
+      "y": 3200
+    },
+    "Contact.dc.html": {
+      "expand": "fill",
+      "h": 1433,
+      "is_interactive": true,
+      "title": "Contact — desktop",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    },
+    "ContactMobile.dc.html": {
+      "h": 1624,
+      "is_interactive": true,
+      "title": "Contact — mobile",
+      "w": 390,
+      "x": 7600,
+      "y": 3200
+    },
+    "Harmony.dc.html": {
+      "expand": "fill",
+      "h": 2067,
+      "is_interactive": true,
+      "title": "Harmony, Inc. — desktop",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "HarmonyMobile.dc.html": {
+      "h": 2891,
+      "is_interactive": true,
+      "title": "Harmony, Inc. — mobile",
+      "w": 390,
+      "x": 6080,
+      "y": 3200
+    },
+    "HomeMobile.dc.html": {
+      "h": 2154,
+      "is_interactive": true,
+      "title": "Home — mobile",
+      "w": 390,
+      "x": 0,
+      "y": 3200
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 2004,
+      "is_interactive": true,
+      "title": "Home — desktop",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Videos.dc.html": {
+      "expand": "fill",
+      "h": 2097,
+      "is_interactive": true,
+      "title": "Videos — desktop",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "VideosMobile.dc.html": {
+      "h": 2064,
+      "is_interactive": true,
+      "title": "Videos — mobile",
+      "w": 390,
+      "x": 4560,
+      "y": 3200
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-29T16:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "desktop": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "Desktop · 1440 px (fluid pages)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "mobile": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "Mobile · 390 px",
+      "w": 240,
+      "x": 0,
+      "y": 2900
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "About.dc.html",
+    "Barbershop.dc.html",
+    "Videos.dc.html",
+    "Harmony.dc.html",
+    "Contact.dc.html",
+    "HomeMobile.dc.html",
+    "AboutMobile.dc.html",
+    "BarbershopMobile.dc.html",
+    "VideosMobile.dc.html",
+    "HarmonyMobile.dc.html",
+    "ContactMobile.dc.html"
+  ],
+  "pages": [],
+  "title": "High Gear Website"
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>High Gear — Videos (mobile)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&amp;display=swap">
+<style>
+body{margin:0;background:#F7EFE0}
+a{color:#7A4520}a:hover{color:#4E2A10}
+*:focus-visible{outline:3px solid #EBD48F;outline-offset:2px;box-shadow:0 0 0 5px #141114}
+.skip{position:absolute;left:16px;top:-80px;background:#EBD48F;color:#141114;padding:12px 16px;font-weight:700;z-index:10}
+.skip:focus{top:16px}
+</style>
+</helmet>
+<div style="position: relative; display: flex; flex-direction: column; min-height: 100vh; width: 390px; font-family: 'DM Sans', system-ui, sans-serif; color: #141114; background: #F7EFE0; line-height: 1.6; font-size: 17px">
+<a href="#main" class="skip">Skip to main content</a>
+
+<header style="background: #141114; color: #F7EFE0; border-bottom: 4px solid #F0925A">
+<div style="padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="HomeMobile.dc.html" style="display: flex; text-decoration: none; color: #F7EFE0">
+<span aria-hidden="true" style="width: 168px; height: 96px; background: #F7EFE0; border: 2px dashed #6E4B2A; border-radius: 6px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; font-size: 13px; font-weight: 700; color: #3D342E; line-height: 1.3">[HIGH GEAR LOGO]</span>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">High Gear</span>
+</a>
+<button type="button" aria-expanded="{{menuState}}" aria-controls="mnav" onClick="{{toggle}}" style="display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 14px; font: inherit; font-weight: 700; color: #F7EFE0; background: transparent; border: 2px solid #F7EFE0; border-radius: 999px; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>{{menuLabel}}</button>
+</div>
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}">
+<nav id="mnav" aria-label="Main">
+<ul style="list-style: none; margin: 0; padding: 0 16px 16px; display: flex; flex-direction: column">
+<li><a href="HomeMobile.dc.html" style="display: flex; align-items: center; min-height: 56px; color: #F7EFE0; text-decoration: none; font-weight: 600; font-size: 19px; border-top: 1px solid #3A3237">Home</a></li>
+<li><a href="AboutMobile.dc.html" style="display: flex; align-items: center; min-height: 56px; color: #F7EFE0; text-decoration: none; font-weight: 600; font-size: 19px; border-top: 1px solid #3A3237">About Us</a></li>
+<li><a href="BarbershopMobile.dc.html" style="display: flex; align-items: center; min-height: 56px; color: #F7EFE0; text-decoration: none; font-weight: 600; font-size: 19px; border-top: 1px solid #3A3237">Barbershop Style</a></li>
+<li><a href="VideosMobile.dc.html" aria-current="page" style="display: flex; align-items: center; min-height: 56px; color: #EBD48F; text-decoration: none; font-weight: 700; font-size: 19px; border-top: 1px solid #3A3237">Videos</a></li>
+<li><a href="HarmonyMobile.dc.html" style="display: flex; align-items: center; min-height: 56px; color: #F7EFE0; text-decoration: none; font-weight: 600; font-size: 19px; border-top: 1px solid #3A3237">High Societies</a></li>
+<li><a href="ContactMobile.dc.html" style="display: flex; align-items: center; min-height: 56px; color: #F7EFE0; text-decoration: none; font-weight: 600; font-size: 19px; border-top: 1px solid #3A3237">Contact</a></li>
+</ul>
+</nav>
+</sc-if>
+</header>
+
+<main id="main" style="flex: 1 0 auto">
+<section aria-labelledby="page-title" style="background: #141114; color: #F7EFE0; padding: 40px 16px 56px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #EBD48F">Videos</p>
+<h1 id="page-title" style="margin: 0; font-family: Limelight, Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.08">Hear us ring</h1>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="aspect-ratio: 16 / 9; background: #2A2428; border: 2px solid #5A4E44; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #CBBFAE; text-align: center; padding: 12px; box-sizing: border-box; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="60" height="60" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="#F0925A"></circle><path d="M38 30 L68 48 L38 66 Z" fill="#141114"></path></svg>[FEATURED YOUTUBE EMBED]</div>
+<figcaption style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 700; color: #F7EFE0">[SONG TITLE]</span><span style="color: #CBBFAE">[EVENT OR CONTEST · MONTH YEAR]</span></figcaption>
+</figure>
+<a href="https://www.youtube.com/" style="display: flex; align-items: center; justify-content: center; min-height: 52px; color: #F7EFE0; text-decoration: none; font-weight: 700; border-radius: 999px; border: 2px solid #F7EFE0">Our YouTube channel<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"> (opens YouTube)</span></a>
+</section>
+
+<section aria-labelledby="more-title" style="padding: 56px 16px; display: flex; flex-direction: column; gap: 28px">
+<h2 id="more-title" style="margin: 0; font-family: Limelight, Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.1">More performances</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 32px">
+<li style="display: flex; flex-direction: column; gap: 10px"><div style="aspect-ratio: 16 / 9; background: #141114; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #CBBFAE; font-size: 14px; font-weight: 600; border-bottom: 5px solid #F0925A"><svg aria-hidden="true" width="48" height="48" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="#F0925A"></circle><path d="M38 30 L68 48 L38 66 Z" fill="#141114"></path></svg>[YOUTUBE EMBED]</div><h3 style="margin: 0; font-size: 20px; line-height: 1.3">[SONG TITLE]</h3><p style="margin: 0; color: #5A4E44; font-size: 16px">[EVENT · MONTH YEAR]</p></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><div style="aspect-ratio: 16 / 9; background: #141114; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #CBBFAE; font-size: 14px; font-weight: 600; border-bottom: 5px solid #F0925A"><svg aria-hidden="true" width="48" height="48" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="#F0925A"></circle><path d="M38 30 L68 48 L38 66 Z" fill="#141114"></path></svg>[YOUTUBE EMBED]</div><h3 style="margin: 0; font-size: 20px; line-height: 1.3">[SONG TITLE]</h3><p style="margin: 0; color: #5A4E44; font-size: 16px">[EVENT · MONTH YEAR]</p></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><div style="aspect-ratio: 16 / 9; background: #141114; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #CBBFAE; font-size: 14px; font-weight: 600; border-bottom: 5px solid #F0925A"><svg aria-hidden="true" width="48" height="48" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="#F0925A"></circle><path d="M38 30 L68 48 L38 66 Z" fill="#141114"></path></svg>[YOUTUBE EMBED]</div><h3 style="margin: 0; font-size: 20px; line-height: 1.3">[SONG TITLE]</h3><p style="margin: 0; color: #5A4E44; font-size: 16px">[EVENT · MONTH YEAR]</p></li>
+</ul>
+<p style="margin: 0; color: #3D342E; font-size: 16px">Every video includes captions. Videos never autoplay; press play when you're ready.</p>
+</section>
+</main>
+
+<footer style="background: #141114; color: #E3D8C6; padding: 40px 16px; font-size: 16px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: Limelight, Georgia, serif; font-size: 24px; color: #F7EFE0">High Gear</p>
+<p style="margin: 0">A proud quartet member of <a href="HarmonyMobile.dc.html" style="color: #EBD48F">Harmony, Inc.</a></p>
+<a href="ContactMobile.dc.html" style="color: #EBD48F; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center">Book or contact us</a>
+<p style="margin: 0">© 2026 High Gear</p>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2064}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { open: false };
+}
+renderVals() {
+const o = !!(this.state && this.state.open);
+return { open: o, menuState: o ? 'true' : 'false', menuLabel: o ? 'Close' : 'Menu', toggle: () => this.setState({ open: !o }) };
+}
+}
+</script>
+</body>
+</html>
