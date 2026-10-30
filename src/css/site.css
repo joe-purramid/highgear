@@ -520,6 +520,25 @@ main {
   align-items: flex-start;
   gap: 8px;
 }
+/* Side by side: share three rows so each left item lines up with the right. */
+@media (min-width: 40em) {
+  .site-footer__inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-between;
+    column-gap: 32px;
+    row-gap: 8px;
+  }
+  .site-footer__col {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-items: center;
+    justify-items: start;
+    gap: inherit;
+  }
+}
 .site-footer__mark {
   font-family: var(--font-display);
   font-size: 26px;
@@ -531,9 +550,11 @@ main {
 .site-footer a:hover {
   color: var(--cream);
 }
-.site-footer__cta {
+.site-footer__cta,
+.site-footer__link {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   min-height: 44px;
   font-weight: 700;
 }
@@ -601,10 +622,20 @@ main {
   color: var(--muted-light-2);
   overflow: hidden;
 }
-.hero__photo img {
+/* With a real photo the frame takes the photo's own proportions, so the
+   whole image shows uncropped. The 4:3 frame is only for the placeholder. */
+.hero__photo--natural {
+  aspect-ratio: auto;
+}
+/* Photo, frame and caption at 85% of the column, centred (owner's choice). */
+@media (min-width: 40em) {
+  .hero__photo--natural,
+  .hero__photo--natural + figcaption {
+    width: 85%;
+    margin-inline: auto;
+  }
+}.hero__photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .hero__figure figcaption {
   margin-top: 22px;
@@ -720,6 +751,8 @@ main {
 .member .portrait {
   flex: 0 0 180px;
   width: 180px;
+  /* Don't stretch to the card's height, which would make an oval. */
+  align-self: flex-start;
   background: var(--portrait-dark);
   color: var(--muted-light-2);
   font-size: 15px;
@@ -727,6 +760,11 @@ main {
 }
 .member .portrait:has(img) {
   padding: 0;
+}
+/* Tall oval matching the 230x370 cropTall boxes in members.json, so the
+   portrait shows shoulders and arms instead of a zoomed-in face. */
+.member .portrait--oval {
+  aspect-ratio: 23 / 37;
 }
 .member__body {
   flex: 1 1 220px;
@@ -1124,6 +1162,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--pos, center);
 }
 .form-panel {
   flex: 1.3 1 480px;
@@ -1389,6 +1428,14 @@ main {
     flex: none;
     width: 140px;
     font-size: 14px;
+  }
+  /* Phones stack the portrait above the bio, so an oval only adds height:
+     show the top (head and shoulders) of the tall crop as a circle. */
+  .member .portrait--oval {
+    aspect-ratio: 1;
+  }
+  .member .portrait--oval img {
+    object-position: top;
   }
   .member__name {
     font-size: 23px;

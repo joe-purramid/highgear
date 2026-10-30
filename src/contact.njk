@@ -17,7 +17,7 @@ scripts: ["/js/contact.js"]
 <p class="lede muted">Booking a performance, planning a singing valentine, or just curious about barbershop? Send us a note.</p>
 <p class="muted">We usually reply within {% if site.replyDays %}{{ site.replyDays }}{% else %}{{ todo("NUMBER") }}{% endif %} days.</p>
 {%- if site.images.performance %}
-<div class="contact__photo">{% image site.images.performance, site.images.performanceAlt, "(min-width: 1024px) 500px, 100vw" %}</div>
+<div class="contact__photo" style="--pos: {{ site.images.performancePosition or 'center' }}">{% image site.images.performance, site.images.performanceAlt, "(min-width: 1024px) 500px, 100vw" %}</div>
 {%- else %}
 {{ placeholder("PERFORMANCE PHOTO", "contact__photo") }}
 {%- endif %}

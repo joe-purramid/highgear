@@ -1,12 +1,15 @@
+{% from "macros.njk" import external %}
 <footer class="site-footer">
 <div class="site-footer__inner wrap">
 <div class="site-footer__col">
 <p class="site-footer__mark">High Gear</p>
 <p>A proud quartet member of <a href="/high-societies/">Harmony, Inc.</a></p>
+<a href="https://www.facebook.com/Highgearquartet/" class="site-footer__link">Follow us on Facebook {{ external() }}</a>
 </div>
 <div class="site-footer__col">
 <a href="/contact/" class="site-footer__cta">Book or contact us</a>
 <p>&copy; <span data-year>{{ "" | year }}</span> High Gear</p>
+<p>Site designed by Twin Sphynxes</p>
 </div>
 </div>
 </footer>

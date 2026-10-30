@@ -17,7 +17,7 @@ title: Home
 </div>
 <figure class="hero__figure">
 {%- if site.images.group %}
-<div class="hero__photo">{% image site.images.group, site.images.groupAlt, "(min-width: 1024px) 700px, 100vw", [400, 800, 1200, 1600], { eager: true } %}</div>
+<div class="hero__photo hero__photo--natural">{% image site.images.group, site.images.groupAlt, "(min-width: 1024px) 700px, 100vw", [400, 800, 1200, 1600], { eager: true } %}</div>
 {%- else %}
 {{ placeholder("GROUP PHOTO — all four members.<br>Alt text names each member, left to right.", "hero__photo") }}
 {%- endif %}
@@ -36,7 +36,7 @@ title: Home
 {%- asyncEach m in members %}
 <li class="voice">
 {%- if m.photo %}
-<div class="portrait">{% image m.photo, m.name, "(min-width: 1024px) 290px, 50vw", [300, 600] %}</div>
+<div class="portrait">{% image m.photo, m.name, "(min-width: 1024px) 290px, 50vw", [180, 300, 600], { crop: m.crop } %}</div>
 {%- else %}
 {{ placeholder("PORTRAIT", "portrait") }}
 {%- endif %}

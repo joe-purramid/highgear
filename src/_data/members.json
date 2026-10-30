@@ -1,6 +1,6 @@
 [
-  { "part": "Tenor", "name": "Ari Schmidt", "pronouns": "(They/Them)", "photo": null, "bio": null },
-  { "part": "Lead", "name": "Christina Tramack", "pronouns": "(She/They)", "photo": null, "bio": null },
-  { "part": "Baritone", "name": "Jennifer Selby", "pronouns": "(She/Her)", "photo": null, "bio": null },
-  { "part": "Bass", "name": "Deb Green", "pronouns": "(She/Her)", "photo": null, "bio": null }
+  { "part": "Bass", "name": "Deb Green", "pronouns": "(She/Her)", "photo": "images/highgear3.jpg", "crop": { "left": 310, "top": 85, "size": 260 }, "cropTall": { "left": 315, "top": 95, "width": 230, "height": 370 }, "bio": null },
+  { "part": "Lead", "name": "Christina Tramack", "pronouns": "(They/Them)", "photo": "images/highgear3.jpg", "crop": { "left": 485, "top": 100, "size": 245 }, "cropTall": { "left": 495, "top": 105, "width": 230, "height": 370 }, "bio": "Christina began their singing career in the womb, as a member of the Tramack barbershop dynasty. Their grandmother was a founding member of Harmony, Inc., and that tradition has passed down the generations with passion and vigor. Christina became a Harmony Queen in 2020 with the quartet Taken 4 Granite." },
+  { "part": "Baritone", "name": "Jennifer Selby", "pronouns": "(She/Her)", "photo": "images/highgear3.jpg", "crop": { "left": 690, "top": 20, "size": 255 }, "cropTall": { "left": 690, "top": 25, "width": 230, "height": 370 }, "bio": "Jennifer began her singing career in 2008 when she joined New England Voices in Harmony, actualizing a love of music that began in her childhood. She became a Harmony Queen in 2014 with the quartet Moonstruck." },
+  { "part": "Tenor", "name": "Ari Schmidt", "pronouns": "(They/Them)", "photo": "images/highgear3.jpg", "crop": { "left": 120, "top": 10, "size": 260 }, "cropTall": { "left": 135, "top": 20, "width": 230, "height": 370 }, "bio": null }
 ]

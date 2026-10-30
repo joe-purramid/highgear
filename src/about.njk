@@ -28,7 +28,7 @@ description: Meet High Gear, a women's barbershop quartet from Nashua, NH — Ar
 {%- asyncEach m in members %}
 <article class="member" aria-labelledby="member-{{ loop.index }}">
 {%- if m.photo %}
-<div class="portrait">{% image m.photo, m.name, "180px", [180, 360] %}</div>
+<div class="portrait portrait--oval">{% image m.photo, m.name, "(min-width: 640px) 180px, 140px", [140, 180, 280, 360], { crop: m.cropTall or m.crop } %}</div>
 {%- else %}
 {{ placeholder("PORTRAIT", "portrait") }}
 {%- endif %}

@@ -32,7 +32,7 @@ src/
   css/site.css  all styles; design tokens at the top
   js/           menu.js, contact.js, videos.js (progressive enhancement)
   *.njk         one file per page
-  images/       put owner-supplied photos and logos here
+images/         owner-supplied photos and logos
 .github/workflows/deploy.yml
 ```
 
@@ -46,7 +46,7 @@ grep -rn "data-todo" _site --include=*.html
 
 | What | Where to put it |
 |---|---|
-| High Gear logo (SVG, or transparent PNG at 2×, 448 × 256) | `src/images/`, then `images.logo` in `src/_data/site.js` |
+| High Gear logo (SVG, or transparent PNG at 2×, 448 × 256) | `images/`, then `images.logo` in `src/_data/site.js` |
 | Group photo, alt text naming each member left to right, and caption | `images.group`, `images.groupAlt`, `images.groupCaption` |
 | Performance photo and alt text (Contact page) | `images.performance`, `images.performanceAlt` |
 | Harmony, Inc. and BHS logos | `images.harmonyLogo`, `images.bhsLogo` |
@@ -57,7 +57,7 @@ grep -rn "data-todo" _site --include=*.html
 | Reply time in days | `replyDays` in `site.js` |
 | Formspree form ID; Turnstile site key | `formspreeId`, `turnstileSiteKey` in `site.js` |
 
-Image paths are relative to the project root, for example `"src/images/group.jpg"`.
+Image paths are relative to the project root, for example `"images/highgear1.jpg"`.
 
 **Captions note on the Videos page.** The line "Every video includes captions…" only appears once `captionsOnAll` is set to `true` in `videos.json`. Turn it on only after checking that every embedded video has real captions, not just YouTube's automatic ones.
 
